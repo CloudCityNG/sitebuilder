@@ -1,0 +1,13 @@
+RewriteEngine on
+
+#RewriteCond $1 !^(index\.php|boostrap|css|elements|fonts|images|js|robots\.txt)
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^(.*)$ index.php/$1 [L]
+
+RewriteRule ^index.php/sites/getframe/([a-zA-Z0-9]*)/(.*) elements/$1/$2
+
+RewriteRule ^index.php/sites/livepreview/([a-zA-Z0-9]*)/(.*) elements/$1/$2
+RewriteRule ^index.php/sites/rpreview/([a-zA-Z0-9]*)/([a-zA-Z0-9]*)/(.*) elements/$2/$3
+
+RewriteRule ^index.php/temple/index/([a-zA-Z0-9]*)/(.*) elements/$1/$2
